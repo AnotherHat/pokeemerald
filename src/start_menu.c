@@ -565,6 +565,7 @@ void ShowStartMenu(void)
     ScriptContext2_Enable();
 }
 
+extern void DebugPrint(const u8 *buffer);
 static bool8 HandleStartMenuInput(void)
 {
     if (JOY_NEW(DPAD_UP))
@@ -605,6 +606,7 @@ static bool8 HandleStartMenuInput(void)
     {
         RemoveExtraStartMenuWindows();
         HideStartMenu();
+        DebugPrint((const u8[]) _("Closed the start menu."));
         return TRUE;
     }
 
