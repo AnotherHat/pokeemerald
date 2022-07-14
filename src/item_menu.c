@@ -1642,6 +1642,10 @@ static void OpenContextMenu(u8 taskId)
                 gBagMenu->contextMenuItemsPtr = sContextMenuItems_BerriesPocket;
                 gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_BerriesPocket);
                 break;
+            case MEGASTONES_POCKET:
+                gBagMenu->contextMenuItemsPtr = sContextMenuItems_MegaStonesPocket;
+                gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_MegaStonesPocket);
+                break;
             }
         }
     }
