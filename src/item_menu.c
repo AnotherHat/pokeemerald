@@ -289,6 +289,11 @@ static const u8 sContextMenuItems_ItemsPocket[] = {
     ACTION_TOSS,        ACTION_CANCEL
 };
 
+static const u8 sContextMenuItems_MegaStonesPocket[] = {
+    ACTION_USE,         ACTION_GIVE,
+    ACTION_TOSS,        ACTION_CANCEL
+};
+
 static const u8 sContextMenuItems_KeyItemsPocket[] = {
     ACTION_USE,         ACTION_REGISTER,
     ACTION_DUMMY,       ACTION_CANCEL
