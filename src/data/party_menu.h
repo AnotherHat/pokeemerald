@@ -574,12 +574,35 @@ static const struct WindowTemplate sUnusedWindowTemplate2 =
 // Plain tilemaps for party menu slots.
 // The versions with no HP bar are used by eggs, and in certain displays like registering at a battle facility.
 // There is no empty version of the main slot because it shouldn't ever be empty.
-static const u8 sSlotTilemap_Main[]      = INCBIN_U8("graphics/party_menu/slot_main.bin");
-static const u8 sSlotTilemap_MainNoHP[]  = INCBIN_U8("graphics/party_menu/slot_main_no_hp.bin");
-static const u8 sSlotTilemap_Wide[]      = INCBIN_U8("graphics/party_menu/slot_wide.bin");
-static const u8 sSlotTilemap_WideNoHP[]  = INCBIN_U8("graphics/party_menu/slot_wide_no_hp.bin");
-static const u8 sSlotTilemap_WideEmpty[] = INCBIN_U8("graphics/party_menu/slot_wide_empty.bin");
+//static const u8 sSlotTilemap_Main[]      = INCBIN_U8("graphics/party_menu/slot_main.bin");
+static const u8 sSlotTilemap_Main[] = {24, 62, 62, 62, 62, 62, 62, 31, 25, 26,
+                                       32, 16, 16, 16, 16, 16, 30, 33, 33, 34,
+                                       32, 16, 16, 16, 16, 30, 33, 33, 33, 34,
+                                       32, 16, 16, 16, 30, 33, 33, 33, 33, 34,
+                                       32, 59, 60, 21, 23, 23, 23, 23, 23, 61,
+                                       32, 16, 30, 33, 33, 33, 33, 33, 33, 34,
+                                       46, 22, 63, 63, 63, 63, 63, 63, 63, 48};
+//static const u8 sSlotTilemap_MainNoHP[]  = INCBIN_U8("graphics/party_menu/slot_main_no_hp.bin");
 
+static const u8 sSlotTilemap_MainNoHP[] = {24, 62, 62, 62, 62, 62, 62, 31, 25, 26,
+                                       32, 16, 16, 16, 16, 16, 30, 33, 33, 34,
+                                       32, 16, 16, 16, 16, 30, 33, 33, 33, 34,
+                                       32, 16, 16, 16, 30, 33, 33, 33, 33, 34,
+                                       32, 41, 41, 41, 41, 41, 41, 41, 41, 61,  //THIS ROW IS FOR HP BAR AND NEEDS TO BE IMPLEMENTED change the tile file accordingly "graphics/party_menu/bg.png"
+                                       32, 16, 30, 33, 33, 33, 33, 33, 33, 34,
+                                       46, 22, 63, 63, 63, 63, 63, 63, 63, 48};
+
+static const u8 sSlotTilemap_Wide[] = {43, 44, 44, 44, 44, 37, 45,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
+                                               49, 33, 33, 33, 33, 33, 39, 38, 37, 52, 53, 51, 51, 51, 51, 51, 51, 54,
+                                               55, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 57};
+
+static const u8 sSlotTilemap_WideNoHP[] = {43, 44, 44, 44, 44, 37, 45,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
+                                               49, 33, 33, 33, 33, 33, 39, 38, 37, 52, 53, 51, 51, 51, 51, 51, 51, 54, //THIS ROW IS FOR HP BAR AND NEEDS TO BE IMPLEMENTED change the tile file accordingly "graphics/party_menu/bg.png"
+                                               55, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 57};
+
+static const u8 sSlotTilemap_WideEmpty[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                                        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                                        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 // Palette offsets
 static const u8 sGenderPalOffsets[] = {11, 12};
 static const u8 sHPBarPalOffsets[] = {9, 10};
